@@ -30,7 +30,7 @@ function Home() {
     }
     const listFaverit = () => {
 
-        let data = JSON.parse(localStorage.getItem("stateFav")).length > 0 ? JSON.parse(localStorage.getItem("stateFav")) : state
+        let data = JSON.parse(localStorage.getItem("stateFav"))?.length > 0 ? JSON.parse(localStorage.getItem("stateFav")) : state
         setFave(!fave)
         fave && chengeFilter()
         setstate(data);
